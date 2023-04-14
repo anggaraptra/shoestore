@@ -1,5 +1,6 @@
 <?php
-class Flash_message
+
+class Flasher
 {
     public static function setFlash($message)
     {
