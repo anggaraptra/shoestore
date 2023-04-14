@@ -6,7 +6,7 @@
     </div>
     <div class="row container-fluid mx-auto">
         <?php foreach ($data['oxfords'] as $ofd) : ?>
-            <div class="container-fluid card card-shoes mb-4" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $ofd['nama_shoes']; ?>">
+            <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $ofd['nama_shoes']; ?>">
                 <img src="<?= BASEURL; ?>/img-shoes/<?= $ofd['gambar'] ?>" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                     <p class="card-title fw-bold"><?= $ofd['nama_shoes']; ?></p>

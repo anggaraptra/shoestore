@@ -28,9 +28,9 @@
 	<main class="content">
 		<div class="container-fluid p-0">
 
-			<div class="flash-data" data-flashdata="<?= Flash_message::flash(); ?>"></div>
+			<div class="flash-data" data-flashdata="<?= Flasher::flash(); ?>"></div>
 
-			<h1 class="h3 mb-3">All Shoes Data</h1>
+			<h1 class="h3 mb-3"><strong>All Shoes</strong> Data</h1>
 
 			<div class="row">
 				<div class="col-12">

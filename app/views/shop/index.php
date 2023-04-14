@@ -9,7 +9,7 @@
     <div class="row container-fluid mx-auto">
         <div class="filterNav"></div>
         <?php foreach ($data['shoes'] as $shs) : ?>
-            <div class="container-fluid card card-shoes mb-4" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $shs['nama_shoes']; ?>">
+            <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $shs['nama_shoes']; ?>">
                 <img src="<?= BASEURL; ?>/img-shoes/<?= $shs['gambar'] ?>" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                     <p class="card-title fw-bold"><?= $shs['nama_shoes']; ?></p>

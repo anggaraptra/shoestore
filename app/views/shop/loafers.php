@@ -6,7 +6,7 @@
     </div>
     <div class="row container-fluid mx-auto">
         <?php foreach ($data['loafers'] as $lfr) : ?>
-            <div class="container-fluid card card-shoes mb-4" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $lfr['nama_shoes']; ?>">
+            <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $lfr['nama_shoes']; ?>">
                 <img src="<?= BASEURL; ?>/img-shoes/<?= $lfr['gambar'] ?>" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                     <p class="card-title fw-bold"><?= $lfr['nama_shoes']; ?></p>

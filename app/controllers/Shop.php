@@ -3,66 +3,84 @@ class Shop extends Controller
 {
     public function index()
     {
-        $data['status1'] = '';
-        $data['status2'] = 'aktif';
-        $data['judul'] = 'Shoestore';
+        // title
+        $data['judul'] = 'Shoestore | Shop';
+
+        // model
         $data['shoes'] = $this->model('Shoes_model')->getAllShoesSorted();
-        $this->view('templates/header', $data);
+
+        // view
+        $this->view('templates/header', $data, 'shop');
         $this->view('shop/index', $data);
         $this->view('templates/footer');
     }
 
     public function sneakers()
     {
-        $data['status1'] = '';
-        $data['status2'] = '';
-        $data['sneakers'] = $this->model('Shoes_model')->getSneakers();
+        // title
         $data['judul'] = 'Shoestore | Sneakers';
-        $this->view('templates/header', $data);
+
+        // model
+        $data['sneakers'] = $this->model('Shoes_model')->getSneakers();
+
+        // view
+        $this->view('templates/header', $data, 'shop');
         $this->view('shop/sneakers', $data);
         $this->view('templates/footer');
     }
 
     public function oxfords()
     {
-        $data['status1'] = '';
-        $data['status2'] = '';
-        $data['oxfords'] = $this->model('Shoes_model')->getOxfords();
+        // title
         $data['judul'] = 'Shoestore | Oxfords';
-        $this->view('templates/header', $data);
+
+        // model
+        $data['oxfords'] = $this->model('Shoes_model')->getOxfords();
+
+        // view
+        $this->view('templates/header', $data, 'shop');
         $this->view('shop/oxfords', $data);
         $this->view('templates/footer');
     }
 
     public function loafers()
     {
-        $data['status1'] = '';
-        $data['status2'] = '';
-        $data['loafers'] = $this->model('Shoes_model')->getLoafers();
+        // title
         $data['judul'] = 'Shoestore | Loafers';
-        $this->view('templates/header', $data);
+
+        // model
+        $data['loafers'] = $this->model('Shoes_model')->getLoafers();
+
+        // view
+        $this->view('templates/header', $data, 'shop');
         $this->view('shop/loafers', $data);
         $this->view('templates/footer');
     }
 
     public function canvas()
     {
-        $data['status1'] = '';
-        $data['status2'] = '';
-        $data['canvas'] = $this->model('Shoes_model')->getClassicCanvas();
+        // title
         $data['judul'] = 'Shoestore | Classic Canvas';
-        $this->view('templates/header', $data);
+
+        // model
+        $data['canvas'] = $this->model('Shoes_model')->getClassicCanvas();
+
+        // view
+        $this->view('templates/header', $data, 'shop');
         $this->view('shop/canvas', $data);
         $this->view('templates/footer');
     }
 
     public function cari()
     {
-        $data['status1'] = '';
-        $data['status2'] = 'aktif';
+        // title
         $data['judul'] = 'Shoestore | Shop';
+
+        // model
         $data['shoes'] = $this->model('Shoes_model')->cariShoes();
-        $this->view('templates/header', $data);
+
+        // view
+        $this->view('templates/header', $data, 'shop');
         $this->view('shop/index', $data);
         $this->view('templates/footer');
     }

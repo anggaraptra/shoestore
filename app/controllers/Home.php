@@ -3,11 +3,14 @@ class Home extends Controller
 {
     public function index()
     {
-        $data['status1'] = 'aktif';
-        $data['status2'] = '';
-        $data['shoes'] = $this->model('Shoes_model')->getLatestShoes();
+        // title
         $data['judul'] = 'Shoestore';
-        $this->view('templates/header', $data);
+
+        // model
+        $data['shoes'] = $this->model('Shoes_model')->getLatestShoes();
+
+        // view
+        $this->view('templates/header', $data, 'home');
         $this->view('home/index', $data);
         $this->view('templates/footer');
     }

@@ -6,7 +6,7 @@
     </div>
     <div class="row container-fluid mx-auto">
         <?php foreach ($data['canvas'] as $cvs) : ?>
-            <div class="container-fluid card card-shoes mb-4" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $cvs['nama_shoes']; ?>">
+            <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $cvs['nama_shoes']; ?>">
                 <img src="<?= BASEURL; ?>/img-shoes/<?= $cvs['gambar'] ?>" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                     <p class="card-title fw-bold"><?= $cvs['nama_shoes']; ?></p>

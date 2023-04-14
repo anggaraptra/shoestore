@@ -6,7 +6,7 @@
     </div>
     <div class="row container-fluid mx-auto">
         <?php foreach ($data['sneakers'] as $snk) : ?>
-            <div class="container-fluid card card-shoes mb-4" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $snk['nama_shoes']; ?>">
+            <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $snk['nama_shoes']; ?>">
                 <img src="<?= BASEURL; ?>/img-shoes/<?= $snk['gambar'] ?>" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                     <p class="card-title fw-bold"><?= $snk['nama_shoes']; ?></p>

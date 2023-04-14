@@ -26,10 +26,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link <?= $data['status1'] ?>" aria-current="page" href="<?= BASEURL; ?>">Home</a>
+                        <?php if ($activeTab == 'home') : ?>
+                            <a class="nav-link aktif" aria-current="page" href="<?= BASEURL; ?>">Home</a>
+                        <?php else : ?>
+                            <a class="nav-link" aria-current="page" href="<?= BASEURL; ?>">Home</a>
+                        <?php endif; ?>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $data['status2'] ?>" href="<?= BASEURL; ?>/shop">Shop</a>
+                        <?php if ($activeTab == 'shop') : ?>
+                            <a class="nav-link aktif" href="<?= BASEURL; ?>/shop">Shop</a>
+                        <?php else : ?>
+                            <a class="nav-link" href="<?= BASEURL; ?>/shop">Shop</a>
+                        <?php endif; ?>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</a>

@@ -32,23 +32,35 @@
                         Pages
                     </li>
 
-                    <li class="sidebar-item <?= $data['status1'] ?>">
+                    <?php if ($activeTab == 'dashboard') : ?>
+                        <li class="sidebar-item active">
+                        <?php else : ?>
+                        <li class="sidebar-item">
+                        <?php endif; ?>
                         <a class="sidebar-link" href="<?= BASEURL; ?>/admin">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                         </a>
-                    </li>
+                        </li>
 
-                    <li class="sidebar-item <?= $data['status2'] ?>">
-                        <a class="sidebar-link" href="<?= BASEURL; ?>/admin/profile">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-                        </a>
-                    </li>
+                        <?php if ($activeTab == 'profile') : ?>
+                            <li class="sidebar-item active">
+                            <?php else : ?>
+                            <li class="sidebar-item">
+                            <?php endif; ?>
+                            <a class="sidebar-link" href="<?= BASEURL; ?>/admin/profile">
+                                <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+                            </a>
+                            </li>
 
-                    <li class="sidebar-item <?= $data['status3'] ?>">
-                        <a class="sidebar-link" href="<?= BASEURL; ?>/admin/shoes">
-                            <i class="align-middle" data-feather="book"></i> <span class="align-middle">Shoes</span>
-                        </a>
-                    </li>
+                            <?php if ($activeTab == 'shoes') : ?>
+                                <li class="sidebar-item active">
+                                <?php else : ?>
+                                <li class="sidebar-item">
+                                <?php endif; ?>
+                                <a class="sidebar-link" href="<?= BASEURL; ?>/admin/shoes">
+                                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Shoes</span>
+                                </a>
+                                </li>
                 </ul>
             </div>
         </nav>
