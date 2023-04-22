@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
         <div class="container-fluid">
-            <a href="<?= BASEURL; ?>/#" class="navbar-brand fw-bold"><span>SHOE</span>STORE</a>
+            <a href="<?= BASEURL; ?>" class="navbar-brand fw-bold"><span>SHOE</span>STORE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,11 +49,6 @@
                         <button class="btn" type="submit" id="tombolCari">Search</button>
                     </form>
                 </div>
-                <ul class=" ms-2 navbar-nav ">
-                    <li class=" nav-item">
-                        <a href="" class="nav-link"><i class="bi bi-person-fill"></i></a>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>

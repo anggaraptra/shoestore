@@ -70,7 +70,7 @@ class Shoes_model
     // add shoes data
     public function tambahShoes($data)
     {
-        $query = "INSERT INTO " . $this->table . " VALUES ('', :nama_shoes, :stok, :kategori, :harga, :gambar)";
+        $query = "INSERT INTO " . $this->table . " VALUES (null, :nama_shoes, :stok, :kategori, :harga, :gambar)";
 
         $this->db->query($query);
         $this->db->bind('nama_shoes', htmlspecialchars($data['shoesName']));

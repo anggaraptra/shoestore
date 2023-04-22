@@ -36,14 +36,14 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-4">
-									<form action="" method="post">
+									<form action="<?= BASEURL; ?>/login/process" method="POST">
 										<div class="mb-3">
 											<label class="form-label">Username</label>
-											<input class="form-control form-control-lg" type="text" name="username" placeholder="Enter your username" />
+											<input class="form-control form-control-lg" type="text" name="username" placeholder="Enter your username" required />
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
-											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
+											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" required />
 											<small>
 												<a href="">Forgot password?</a>
 											</small>
