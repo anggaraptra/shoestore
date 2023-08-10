@@ -2,6 +2,3 @@
 - merapikan admin di bagian dashboard dan memindahkan calender ke profile
 - mengisi ikon user lagi di header
 - memperbaiki bagian buy
-
-ATURAN COMMIT
-<type>(scope): <description>
