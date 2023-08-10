@@ -251,3 +251,10 @@ footer .footer-sosmed a:hover {
   padding-top: 56px;
   background-color: var(--background);
 }
+
+.buy .row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}

@@ -1,7 +1,7 @@
 <?php
 
 // base url
-define('BASEURL', 'http://localhost/myproject/shoestore/home');
+define('BASEURL', 'http://localhost/myproject/shoestore/public');
 
 // database
 define('DB_HOST', 'localhost');

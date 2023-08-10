@@ -30,24 +30,6 @@ class Admin extends Controller
         $this->view('templates/admin-footer');
     }
 
-    public function signIn()
-    {
-        // title
-        $data['judul'] = 'Shoestore | Admin Sign In';
-
-        // view
-        $this->view('admin/pages-sign-in', $data);
-    }
-
-    public function signUp()
-    {
-        // title
-        $data['judul'] = 'Shoestore | Admin Sign Up';
-
-        // view
-        $this->view('admin/pages-sign-up', $data);
-    }
-
     public function shoes()
     {
         // title
@@ -62,11 +44,11 @@ class Admin extends Controller
         $this->view('templates/admin-footer');
     }
 
-    public function tambah()
+    public function add()
     {
-        if ($this->model('Shoes_model')->tambahShoes($_POST) > 0) {
+        if ($this->model('Shoes_model')->addShoes($_POST) > 0) {
             Flasher::setFlash('Added');
-            header('Location: ' . BASEURL . '/admin');
+            header('Location: ' . BASEURL . '/admin/shoes');
             exit;
         } else {
             Flasher::setFlash('Failed to add');

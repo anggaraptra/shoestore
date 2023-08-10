@@ -2,6 +2,7 @@
 
 class User_model
 {
+    // properties
     private $table = 'user';
     private $db;
 
@@ -10,6 +11,7 @@ class User_model
         $this->db = new Database;
     }
 
+    // get user by id
     public function getAdminById($id)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
@@ -17,6 +19,7 @@ class User_model
         return $this->db->single();
     }
 
+    // get all user
     public function getAllAdmin()
     {
         $this->db->query('SELECT * FROM ' . $this->table);

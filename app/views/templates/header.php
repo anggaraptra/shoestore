@@ -44,11 +44,16 @@
                     </li>
                 </ul>
                 <div class="form">
-                    <form action="<?= BASEURL; ?>/shop/cari" method="post" class="d-flex">
+                    <form action="<?= BASEURL; ?>/shop/search" method="post" class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search Shoes" aria-label="Search" name="keyword" id="keyword" required autofocus autocomplete="off">
                         <button class="btn" type="submit" id="tombolCari">Search</button>
                     </form>
                 </div>
+                <ul class=" ms-2 navbar-nav ">
+                    <li class=" nav-item">
+                        <a href="" class="nav-link"><i class="bi bi-person-fill"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

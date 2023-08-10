@@ -2,6 +2,7 @@
 
 class Shoes_model
 {
+    // properties
     private $table = 'shoes';
     private $db;
 
@@ -10,24 +11,28 @@ class Shoes_model
         $this->db = new Database;
     }
 
+    // get latest shoes
     public function getLatestShoes()
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 5');
         return $this->db->resultSet();
     }
 
+    // get all shoes sorted
     public function getAllShoesSorted()
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC');
         return $this->db->resultSet();
     }
 
+    // get all shoes
     public function getAllShoes()
     {
         $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();
     }
 
+    // get shoes by id
     public function getShoesById($id)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
@@ -68,7 +73,7 @@ class Shoes_model
     }
 
     // add shoes data
-    public function tambahShoes($data)
+    public function addShoes($data)
     {
         $query = "INSERT INTO " . $this->table . " VALUES (null, :nama_shoes, :stok, :kategori, :harga, :gambar)";
 
@@ -130,7 +135,7 @@ class Shoes_model
     }
 
     // search shoes
-    public function cariShoes()
+    public function searchShoes()
     {
         $keyword = $_POST['keyword'];
         $this->db->query("SELECT * FROM " . $this->table . " WHERE nama_shoes LIKE :keyword OR kategori LIKE :keyword");

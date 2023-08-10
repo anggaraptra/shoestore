@@ -71,13 +71,13 @@ class Shop extends Controller
         $this->view('templates/footer');
     }
 
-    public function cari()
+    public function search()
     {
         // title
         $data['judul'] = 'Shoestore | Shop';
 
         // model
-        $data['shoes'] = $this->model('Shoes_model')->cariShoes();
+        $data['shoes'] = $this->model('Shoes_model')->searchShoes();
 
         // view
         $this->view('templates/header', $data, 'shop');

@@ -3,12 +3,12 @@ $('.modalCheck').on('click', function () {
   const id = $(this).data('id');
 
   $.ajax({
-    url: 'http://localhost/myproject/shoestore/home/shop/getShoes',
+    url: 'http://localhost/myproject/shoestore/public/shop/getShoes',
     data: { id: id },
     method: 'post',
     dataType: 'json',
     success: function (data) {
-      const idBuy = 'http://localhost/myproject/shoestore/home/buy/' + data.id;
+      const idBuy = 'http://localhost/myproject/shoestore/public/buy/' + data.id;
       $('#idBuy').attr('href', idBuy);
       $('#id').val(data.id);
       $('#nameShoes').val(data.nama_shoes);
@@ -22,7 +22,7 @@ $('.modalCheck').on('click', function () {
       });
       $('#price').val(priceFormat);
       // get gambar shoes
-      const src = 'http://localhost/myproject/shoestore/home/img-shoes/' + data.gambar;
+      const src = 'http://localhost/myproject/shoestore/public/img-shoes/' + data.gambar;
       $('#imgShoes').attr('src', src);
     },
   });
@@ -70,4 +70,35 @@ $('.buttonDelete').on('click', function (e) {
 // show sort by
 $('.filter').on('click', function () {
   $('.filterNav').toggleClass('show');
+});
+
+// Quantity
+$(document).ready(function () {
+  var quantitiy = 0;
+  $('.quantity-right-plus').click(function (e) {
+    // Stop acting like a button
+    e.preventDefault();
+    // Get the field name
+    var quantity = parseInt($('#quantity').val());
+
+    // If is not undefined
+
+    $('#quantity').val(quantity + 1);
+
+    // Increment
+  });
+
+  $('.quantity-left-minus').click(function (e) {
+    // Stop acting like a button
+    e.preventDefault();
+    // Get the field name
+    var quantity = parseInt($('#quantity').val());
+
+    // If is not undefined
+
+    // Increment
+    if (quantity > 0) {
+      $('#quantity').val(quantity - 1);
+    }
+  });
 });

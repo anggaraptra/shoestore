@@ -118,8 +118,10 @@
                                     <td><input class="form-control" type="text" id="price" readonly></td>
                                 </tr>
                             </table>
-                            <a href="" class="btn btn-primary">Add Cart</a>
-                            <a id="idBuy" href="" class="btn btn-success">Buy Now</a>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary">Add Cart</a>
+                                <a id="idBuy" href="" class="btn btn-success">Buy Now</a>
+                            </div>
                         </div>
                     </div>
                 </form>

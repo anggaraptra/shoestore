@@ -5,16 +5,26 @@
         </div>
     </div>
     <div class="row container-fluid mx-auto">
-        <?php foreach ($data['sneakers'] as $snk) : ?>
-            <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $snk['nama_shoes']; ?>">
-                <img src="<?= BASEURL; ?>/img-shoes/<?= $snk['gambar'] ?>" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                    <p class="card-title fw-bold"><?= $snk['nama_shoes']; ?></p>
-                    <p class="card-text"><?= rp($snk['harga']); ?></p>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#checkModal" class="btn modalCheck" data-id="<?= $snk['id']; ?>">Detail</a>
+        <?php if ($data['sneakers'] != null) : ?>
+            <?php foreach ($data['sneakers'] as $snk) : ?>
+                <div class="container-fluid card card-shoes mb-5" style="width: 16rem;" data-bs-toggle="tooltip" title="<?= $snk['nama_shoes']; ?>">
+                    <img src="<?= BASEURL; ?>/img-shoes/<?= $snk['gambar'] ?>" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <p class="card-title fw-bold"><?= $snk['nama_shoes']; ?></p>
+                        <p class="card-text"><?= rp($snk['harga']); ?></p>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#checkModal" class="btn modalCheck" data-id="<?= $snk['id']; ?>">Detail</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <div class="container-fluid mb-5">
+                <div class="row">
+                    <div class="col text-center">
+                        <h5>Shoes Not Found</h5>
+                    </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>
 

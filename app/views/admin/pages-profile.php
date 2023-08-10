@@ -30,12 +30,9 @@
 				<h1 class="h3 d-inline align-middle"><strong>Profile</strong> Details</h1>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-xl-3">
+				<div class="col-md-6 col-xl-6">
 					<div class="card mb-3">
 						<div class="card-body text-center">
-							<!-- <?php foreach ($data['user_admin'] as $row) : ?>
-								<h5 class="card-title mb-2"><?= $row['username']; ?></h5>
-							<?php endforeach; ?> -->
 							<h5 class="card-title mb-2">Mimin</h5>
 							<div class="text-muted mb-1"><i class="align-middle" data-feather="mail"></i></div>
 							<div class="text-muted mb-1"><i class="align-middle" data-feather="smartphone"></i></div>
@@ -44,17 +41,17 @@
 					</div>
 				</div>
 
-				<div class="col-md-8 col-xl-9">
+				<div class="col-md-6 col-xl-6">
 					<div class="card">
 						<div class="card-header">
 
-							<h5 class="card-title mb-0">Note</h5>
+							<h5 class="card-title mb-0">Calender</h5>
 						</div>
 						<div class="card-body h-100">
-
-							<hr />
-							<div class="d-grid">
-								<a href="#" class="btn btn-primary">Load more</a>
+							<div class="align-self-center w-100">
+								<div class="chart">
+									<div id="datetimepicker-dashboard"></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -63,3 +60,16 @@
 
 		</div>
 	</main>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 0 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
